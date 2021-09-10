@@ -1,40 +1,96 @@
-YOUR NAME Lab 2: Intro to HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Greg Sarafian - Lab 2</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
 
-Selectors
-Main Page
+    <body class="wrapper">
+        <h1 class="title">
+            GREGORY SARAFIAN Lab 2: Intro to HTML
+        </h1>
 
-First, the basics.
+        <nav>
+            <a href="selectors.html">Selectors</a>
+            <a href="index.html">Main Page</a>
+        </nav>
+        
+        <h2 class="subtitle">First, the basics.</h2>
 
-You need the following to build your website.
+        <p>You need the following to build your website.</p>
 
-HTML and CSS
-Javascript
-Node.js
-And other web development frameworks
+        <div class="section_1">
+            <ul>
+                <li>HTML and CSS</li>
+                <li>Javascript</li>
+                <li>Node.js</li>
+                <li>And other web development frameworks</li>
+            </ul>
+            
+            <div>
+                <p>
+                    You should list your top 3 goals for the class below.
+                </p>
+    
+                <ol>
+                    <li>Learn front-end web design</li>
+                    <li>Learn new programming languages</li>
+                    <li>Learn how to work with others in a technical space</li>
+                    <li>Learn popular web dev frameworks</li>
+                </ol>
 
-You should list your top 3 goals for the class below.
+            </div>
+            
+        </div>
 
-Learn front-end web design
-Learn new programming languages
-Learn how to work with others in a technical space
-Learn popular web dev frameworks
+        <div class="section_2">
+            <h2 class="subtitle">Let's Try Some Inline Elements</h2>
 
-Let's Try Some Inline Elements
+            <p class="default">Sometimes you want to <em>draw attention to something</em> in a line of text.
+                <br><br>Sometimes you want to <b>strongly emphasize something</b> in the text.
+                <br><br>Sometimes you want to <em><b>do both</b></em>.
+            </p>
+        </div>
 
-Sometimes you want to draw attention to something in a line of text.
+        <div class="section_3">
+            <h3 class="subtitle">Empty Elements</h3>
 
-Sometimes you want to strongly emphasize something in the text.
+            <p class="default">Soft line breaks can't wrap anything.
+                <br>Neither can image tags, or hard lines.
+                <br>Add a hard line under here, and make sure you've used some soft line breaks to match your page to the sample.
+            </p>
 
-Sometimes you want to do both.
+            <hr>
 
-Empty Elements
+        </div>
 
-Soft line breaks can't wrap anything. Neither can image tags, or hard lines.
-Add a hard line under here, and make sure you've used some soft line breaks to match your page to the sample.
+        <div class="section_4">
+            <div class="text">
+                <h2 class="subtitle">Images</h2>
 
-Images 
+                <p class="default">
+                    Include the four images in the /images folder below<br>Don't forget to use alt text on your images. It's important for accessibility.
+                </p>
+            </div>
+            
 
-Don't forget to use alt text on your images. It's important for accessibility.
+            <div class="carousel">
+                <div class="slides">
+                    <img src='images/mochi.png' alt='mochi 1'/>
+                    <img src='images/mochi.jpg' alt='mochi 2'/>
+                    <img src='images/mochi.gif' alt='mochi 3'/>
+                    <img src='images/mochi.svg' alt='mochi 4'/>
+                </div>
+            </div>
 
-Include a hyperlink here to your github repository for class.
-If you want your repo to be private, be sure to invite Prof A as a "collaborator."
+            
+        </div>
+
+        <div>
+            <a href="https://github.com/GregSarafian/INST377-Lab-Work">Include a hyperlink here to your github repository for class.</a>
+            <p class="default">If you want your repo to be private, be sure to invite Prof A as a "collaborator."</p>
+        </div>
+    </body>
+
+</html>
