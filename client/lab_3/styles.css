@@ -78,6 +78,12 @@
   margin-bottom: 20px;
 }
 
+.social,
+.subscribe a {
+  color: #5995DA;
+  text-decoration: none;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -100,7 +106,13 @@
 .signup {
     margin-left: auto;
     color:#ffffff;
-    text-decoration: ;
+    text-decoration: none;
+  }
+
+  .signup,
+  .login a {
+    color: #ffffff;
+    text-decoration: none;
   }
 
   .title {
