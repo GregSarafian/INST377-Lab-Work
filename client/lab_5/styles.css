@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
 html {
-  background-color: green;
+  background-color: hsl(0, 0%, 14%);
 }
 
 * {
@@ -15,7 +15,6 @@ body {
   padding: 0;
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-  background-color: darkslategray;
 }
 
 /* Page Layout */
@@ -30,4 +29,8 @@ body {
 .container {
   max-width: 960px;
   margin-top: 25px;
+}
+
+.new-width {
+  width: 600px;
 }

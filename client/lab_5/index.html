@@ -3,18 +3,86 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Bulma Lab 5</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-full">
-          First column
-        </div>
+    <!-- Bulma Overall Content Wrap-->
+    <div class="wrapper">
+      <div class="container">
+        <!-- Title Card -->
+        <div class="columns">
+          <div class="column">
+            <div class="column is-vcentered">
+              <div class="box has-background-link-dark">
+                <div class="column is-8">
+                  <p class="is-primary bd-notification is-size-3 has-text-link-light">
+                    Greg Sarafian's Lab #5
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="columns">
+            <div class="column">
+              <div class="column is-offset-6 is-6">
+                <div class="box has-background-primary-dark">
+
+                  <!-- First  Name Question-->
+                  <div class="form-row has-text-primary-light"> 
+                    <form class="body" action="/api" method="get"></form>
+                    <label for="firstName">First Name</label>
+                    <input class="input is-primary" for="firstName" name="firstName" type="text"/>
+                  </div>
+                  <br>
+  
+                  <!-- Food Preference Question-->
+                  <div class="form-row has-text-primary-light">
+                    <form class="body" action="/api" method="get"></form>
+                    <label for="foodPref">Food Preference</label>
+                    <input class="input is-primary" for="foodPref" name="foodPref" type="text"/>
+                  </div>
+                  <br>
+
+                  <!-- Veggie or Vegan Question-->
+                  <div class="field has-text-primary-light">
+                    <div class="control">
+                      <label class="label has-text-primary-light"> Veggie or Vegan?</label>
+                      <label class="radio">
+                        <input type="radio" name="question">
+                        Yes
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="question">
+                        No
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="control">
+                    <form action="/api">
+                      <button class="button is-link has-background-primary-light has-text-primary-dark">Submit</button>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="column">
+                <div class="box new-width has-background-primary-light has-text-primary-dark">
+                  This is going to be something in two weeks.
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
-  </section>
   </body>
 </html>
