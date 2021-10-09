@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <title>Lab #6</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
+    <h2>Restaurant Locator</h2>
+    <p><em>Locate your favorite eateries in Prince George's County, MD!</em></p>
+    <form>
+      <label>Search: </label>
+      <input class="search" type="text"/>
+      <div class="results"></div>
+    </form>
+
+   <script>
+      async function windowActions() {
+        endpoint = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
+
+        const request = await fetch(endpoint);
+        const restaurants = await request.json();
+
+        function findMatches(matchingQuery, restaurants) {
+          return restaurants.filter((location) => {
+
+            const regex = new RegExp(matchingQuery, "gi");
+
+            return location.name.match(regex) ||
+              location.category.match(regex);
+
+          });
+        }
+
+        function displayMatches(event) {
+          const arraySync = findMatches(event.target.value, restaurants);
+          const myVal = arraySync
+            .map((location) => {
+              return `
+
+                <div class="result">
+                  <div class="name"><b>${location.name}</b></div>
+                  <div class="category">${location.category}</div>
+                  <br>
+                  <em>
+                    <div class="address">${location.address_line_1}</div>
+                    <div class="city">${location.city}</div>
+                    <div class="zip">${location.zip}</div>
+                  </em>
+                </div>
+
+            `; }).join("");
+
+          results.innerHTML = myVal;
+        }
+
+        const findQuery = document.querySelector(".search");
+        const results = document.querySelector(".results");
+
+        findQuery.addEventListener("change", displayMatches);
+        findQuery.addEventListener("keyup", (myResults) => {
+          displayMatches(myResults);
+        });
+      }
+
+      window.onload = windowActions;
+    </script>
 
   </body>
+
 </html>
