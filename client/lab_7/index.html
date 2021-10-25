@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <title>Lab #7 - Gregory Sarafian</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
+
   <body>
+    <h2>Restaurant Locator, Greg Sarafian</h2>
+    <p><em>Locate your favorite eateries via Zip Code in Prince George's County, MD!</em></p>
+
+    <div class="columns is-desktop">
+      <form class="search">
+        <div class="field column">
+          <label>Search: </label>
+          <input type="search" type="text"/>
+          <div class="results"></div>
+        </div>
+        
+      </form>
+
+      <div class="column">
+        <div id="mapid"></div>
+      </div>
+    </div>
+    
+   <script src="script.js"></script>
 
   </body>
+
 </html>
